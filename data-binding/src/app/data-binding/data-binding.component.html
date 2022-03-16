@@ -1,4 +1,4 @@
-<!-- <section class="property-binding">
+<section class="container">
     <article>
         <h3>open facebook -> </h3> <a href='{{ url }}' target="_blank">Facebook</a>
         <p>Resultado de 1 + 1 é: {{ 1 +1 }} </p>
@@ -11,7 +11,7 @@
         <img src='{{ urlImage }}'/>
         <img [src]='urlImage '/>
     </article>
-</section>   -->
+</section>  
 <section class="container">
     <article>
         <h3>Class e Style Binding</h3>
@@ -60,4 +60,22 @@
               </div>
         </div>
     </article>
+    <article>
+      <h3>Event Binding</h3>
+      <div>
+   
+      <button (click)="botaoClicado()" 
+        class="btn btn-primary">Me clique!</button>
+      </div>
+      <br>
+
+      <input type="text" name="" id="" class="form-control" 
+      (keyup)="onKeyUp($event)"
+      (keyup.enter)="salvarValor($event)"
+      >
+      <p>Valor atual {{ valorAtual }}</p>
+      <p>Valor salvo {{ valorSalvo }}</p>
+    </article>
+
+    <br><br>
 </section>
